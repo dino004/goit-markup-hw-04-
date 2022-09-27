@@ -674,3 +674,42 @@ position: relative;
 .card:hover .hover-text {
   opacity: 1;
 }
+
+/* позиціонування секції "чим ми займаємось" */
+
+.employment {
+  position: relative;
+}
+
+.image-list {
+  position: relative;
+}
+
+.image-list::before {
+  content: '';
+
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  min-height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.text-employment {
+  position: absolute;
+  width: 100%;
+  min-height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+
+  font-weight: 700;
+  color: var(--header-bg-color);
+  text-transform: uppercase;
+  text-align: center;
+}
