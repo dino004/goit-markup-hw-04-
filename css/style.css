@@ -98,6 +98,19 @@ a {
   align-items: center;
 }
 
+.menu .item .link:hover::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 .menu li + li {
   margin-left: 50px;
 }
@@ -113,6 +126,7 @@ a {
 } */
 
 .menu a {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -654,7 +668,7 @@ position: relative;
 
 .card::before {
   display: inline-block;
-  content: "";
+  content: '';
 
   position: absolute;
   width: 100%;
@@ -684,11 +698,10 @@ position: relative;
 
 /* робимо видимими */
 
-.card:hover::before {
-  opacity: 1;
-}
-
-.card:hover .hover-text {
+.card:hover::before,
+.card:focus::before,
+.card:hover .hover-text,
+.card:focus .hover-text {
   opacity: 1;
 }
 
@@ -771,7 +784,7 @@ position: relative;
 
   width: 30px;
   height: 30px;
-
+  cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   background-color: var(--header-bg-color);
